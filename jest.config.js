@@ -51,9 +51,9 @@ export default {
   // errorOnDeprecated: false,
 
   // The default configuration for fake timers
-  fakeTimers: {
-    enableGlobally: true,
-  },
+  // fakeTimers: {
+  //   enableGlobally: true,
+  // },
 
   // Force coverage collection from ignored files using an array of glob patterns
   // forceCoverageMatch: [],
@@ -205,11 +205,12 @@ export default {
     "@/components/(.*)": "<rootDir>/src/components/$1",
     "@/assets/(.*)": "<rootDir>/src/assets/$1",
     "@/hooks/(.*)": "<rootDir>/src/hooks/$1",
+    "@/mockData/(.*)": "<rootDir>/src/mockData/$1",
     "@/pages/(.*)": "<rootDir>/src/pages/$1",
     "@/sass/(.*)": "<rootDir>/src/sass/$1",
     "@/utils/(.*)": "<rootDir>/src/utils/$1",
     "@/services/(.*)": "<rootDir>/src/services/$1",
   },
   moduleDirectories: ["node_modules", "src"],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 };
