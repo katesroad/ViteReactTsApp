@@ -4,7 +4,7 @@ import React from 'react';
 import App from './App';
 
 it('render', () => {
-  const { container } = render(<App />);
+  render(<App />);
 
   expect(screen.getByRole('button', { name: /Click Me/i })).toBeInTheDocument();
-})
+});
