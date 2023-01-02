@@ -5,13 +5,15 @@ import Button from '@/components/Button';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [user, setUser] = useState<IUser | null>(null);
+  const [user] = useState<IUser | null>(null);
 
   return (
     <div className="App">
       <Button>Click Me</Button>
       <ReactLogo />
-      {user ? JSON.stringify(user) : 'No user yet'}
+      {user
+        ? JSON.stringify(user)
+        : 'No user yet'}
       <div>
         <a href="https://vitejs.dev"
           rel="noreferrer"
